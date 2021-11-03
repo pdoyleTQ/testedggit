@@ -1,0 +1,64 @@
+# baseURI: urn:x-evn-master:t1
+# imports: http://topbraid.org/skos.shapes
+# imports: http://topbraid.org/teamworkconstraints
+# imports: urn:x-evn-master:o1
+
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix edg: <http://edg.topbraid.solutions/model/> .
+@prefix graphql: <http://datashapes.org/graphql#> .
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix t1: <http://example.org/taxonomies/t1#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://evn.topbraidlive.org/evnprojects#Taxonomy>
+  rdfs:subClassOf teamwork:Vocabulary ;
+.
+t1:c1
+  a skos:Concept ;
+  skos:prefLabel "c1" ;
+.
+t1:g
+  a <http://example.org/ontologies/o1#SubSubC1> ;
+  skos:broader t1:vf ;
+  skos:prefLabel "g" ;
+.
+t1:scheme1
+  a skos:ConceptScheme ;
+  rdfs:label "scheme1" ;
+  skos:hasTopConcept t1:c1 ;
+.
+t1:svcdsf
+  a <http://example.org/ontologies/o1#SubC2> ;
+  skos:broader t1:c1 ;
+  skos:prefLabel "svcdsf" ;
+.
+t1:vf
+  a <http://example.org/ontologies/o1#SubC1> ;
+  skos:broader t1:svcdsf ;
+  skos:prefLabel "vf" ;
+.
+teamwork:Vocabulary
+  rdfs:subClassOf owl:Ontology ;
+.
+<urn:x-evn-master:t1>
+  a <http://evn.topbraidlive.org/evnprojects#Taxonomy> ;
+  a teamwork:Vocabulary ;
+  a owl:Ontology ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  <http://topbraid.org/swa#defaultNamespace> "http://example.org/taxonomies/t1#" ;
+  teamwork:mainClass <http://example.org/ontologies/o1#SubC2> ;
+  teamwork:rootClass owl:Class ;
+  rdfs:label "t1" ;
+  owl:imports <http://topbraid.org/skos.shapes> ;
+  owl:imports <http://topbraid.org/teamworkconstraints> ;
+  owl:imports <urn:x-evn-master:o1> ;
+.

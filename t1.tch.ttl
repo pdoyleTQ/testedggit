@@ -1,0 +1,191 @@
+# baseURI: urn:x-evn-master:t1.tch
+# imports: http://topbraid.org/compliance
+# imports: http://topbraid.org/teamwork
+# imports: urn:x-evn-master:t1
+# imports: urn:x-evn-user-data
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:x-change:2021-11-01T17-54-09.938ZAdministrator-02eff805-0ed8-4529-9454-a6044e30ac19>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:54:09.938Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+      <http://topbraid.org/teamwork#predicate> rdf:type ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#scheme1> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> "scheme1" ;
+      <http://topbraid.org/teamwork#predicate> rdfs:label ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#scheme1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Created Concept Scheme \"scheme1\"" ;
+.
+<urn:x-change:2021-11-01T17-54-12.875ZAdministrator-b335899c-f3ef-4dab-a39d-1acc642616b1>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:54:12.875Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/taxonomies/t1#c1> ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#hasTopConcept> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#scheme1> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://www.w3.org/2004/02/skos/core#Concept> ;
+      <http://topbraid.org/teamwork#predicate> rdf:type ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#c1> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> "c1" ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#c1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Created Concept \"c1\"" ;
+.
+<urn:x-change:2021-11-01T17-55-52.065ZAdministrator-93e249d1-e6c8-4d78-a29d-7a6f80dd76af>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:55:52.065Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <urn:x-evn-master:o1> ;
+      <http://topbraid.org/teamwork#predicate> owl:imports ;
+      <http://topbraid.org/teamwork#subject> <urn:x-evn-master:t1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Add owl:imports o1 to t1" ;
+.
+<urn:x-change:2021-11-01T17-55-55.124ZAdministrator-4ba8730f-eed7-4872-ba8b-3bcb3e26354e>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:55:55.124Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#deleted> [
+      <http://topbraid.org/teamwork#object> <urn:x-evn-master:o1> ;
+      <http://topbraid.org/teamwork#predicate> owl:imports ;
+      <http://topbraid.org/teamwork#subject> <urn:x-evn-master:t1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Remove owl:imports o1 from t1" ;
+.
+<urn:x-change:2021-11-01T17-56-00.029ZAdministrator-479f9662-ffa4-428d-8bfc-bdca0f554058>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:56:00.029Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <urn:x-evn-master:o1> ;
+      <http://topbraid.org/teamwork#predicate> owl:imports ;
+      <http://topbraid.org/teamwork#subject> <urn:x-evn-master:t1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Add owl:imports o1 to t1" ;
+.
+<urn:x-change:2021-11-01T17-56-01.779ZAdministrator-1d414a1c-587f-42d3-b93f-15e618281763>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:56:01.779Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#deleted> [
+      <http://topbraid.org/teamwork#object> <urn:x-evn-master:o1> ;
+      <http://topbraid.org/teamwork#predicate> owl:imports ;
+      <http://topbraid.org/teamwork#subject> <urn:x-evn-master:t1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Remove owl:imports o1 from t1" ;
+.
+<urn:x-change:2021-11-01T17-56-12.717ZAdministrator-ae8a8960-8f26-4b39-be09-6a13ffd3a17c>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:56:12.717Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <urn:x-evn-master:o1> ;
+      <http://topbraid.org/teamwork#predicate> owl:imports ;
+      <http://topbraid.org/teamwork#subject> <urn:x-evn-master:t1> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Add owl:imports o1 to t1" ;
+.
+<urn:x-change:2021-11-01T17-56-40.458ZAdministrator-df8d6303-623d-49da-8ee8-658120541e36>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:56:40.458Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/ontologies/o1#SubC2> ;
+      <http://topbraid.org/teamwork#predicate> rdf:type ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#svcdsf> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/taxonomies/t1#c1> ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#broader> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#svcdsf> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> "svcdsf" ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#svcdsf> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Created SubC2 \"svcdsf\"" ;
+.
+<urn:x-change:2021-11-01T17-56-50.14ZAdministrator-b841ecea-7fed-47a5-b297-ef41d60bc1ad>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:56:50.14Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/ontologies/o1#SubC1> ;
+      <http://topbraid.org/teamwork#predicate> rdf:type ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#vf> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/taxonomies/t1#svcdsf> ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#broader> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#vf> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> "vf" ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#vf> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Created SubC1 \"vf\"" ;
+.
+<urn:x-change:2021-11-01T17-57-03.365ZAdministrator-696eb426-f5e3-4cad-93a2-59df553d86ae>
+  a <http://topbraid.org/teamwork#Change> ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:57:03.365Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/ontologies/o1#SubSubC1> ;
+      <http://topbraid.org/teamwork#predicate> rdf:type ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#g> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> <http://example.org/taxonomies/t1#vf> ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#broader> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#g> ;
+    ] ;
+  <http://topbraid.org/teamwork#added> [
+      <http://topbraid.org/teamwork#object> "g" ;
+      <http://topbraid.org/teamwork#predicate> <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+      <http://topbraid.org/teamwork#subject> <http://example.org/taxonomies/t1#g> ;
+    ] ;
+  <http://topbraid.org/teamwork#status> <http://topbraid.org/teamwork#Committed> ;
+  rdfs:comment "Created SubSubC1 \"g\"" ;
+.
+<urn:x-evn-master:t1.tch>
+  a owl:Ontology ;
+  <http://purl.org/dc/terms/created> "2021-11-01T17:53:51.943Z"^^xsd:dateTime ;
+  <http://rdfs.org/sioc/ns#has_creator> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#gitEnabled> true ;
+  <http://topbraid.org/teamwork#initialChangeStatus> <http://topbraid.org/teamwork#Uncommitted> ;
+  <http://topbraid.org/teamwork#lastChange> <urn:x-change:2021-11-01T17-57-03.365ZAdministrator-696eb426-f5e3-4cad-93a2-59df553d86ae> ;
+  <http://topbraid.org/teamwork#manager> <urn:x-tb-users:Administrator> ;
+  <http://topbraid.org/teamwork#originalBaseURI> <http://example.org/taxonomies/t1> ;
+  <http://topbraid.org/teamwork#projectType> <http://evn.topbraidlive.org/evnprojects#ProjectType> ;
+  owl:imports <http://topbraid.org/compliance> ;
+  owl:imports <http://topbraid.org/teamwork> ;
+  owl:imports <urn:x-evn-master:t1> ;
+  owl:imports <urn:x-evn-user-data> ;
+.
