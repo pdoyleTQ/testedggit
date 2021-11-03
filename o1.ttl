@@ -1,0 +1,89 @@
+# baseURI: urn:x-evn-master:o1
+# imports: http://datashapes.org/graphql
+# imports: http://topbraid.org/skos-xl.shapes
+# imports: http://topbraid.org/skos.shapes
+
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix graphql: <http://datashapes.org/graphql#> .
+@prefix metadata: <http://topbraid.org/metadata#> .
+@prefix ontologyprojects: <http://teamwork.topbraidlive.org/ontologyprojects#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontologies/o1#NewPrefGroupPropertyGroup>
+  a sh:PropertyGroup ;
+  rdfs:label "NewPrefGroup" ;
+  sh:order "11"^^xsd:decimal ;
+.
+<http://example.org/ontologies/o1#c1>
+  a owl:Class ;
+  a sh:NodeShape ;
+  rdfs:label "c1" ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://example.org/ontologies/o1#asdf> ;
+      dash:viewer dash:BlankNodeViewer ;
+      sh:group <http://example.org/ontologies/o1#g1PropertyGroup> ;
+      sh:name "asdf" ;
+      sh:nodeKind sh:BlankNode ;
+      sh:order "0"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://example.org/ontologies/o1#ed> ;
+      sh:group <http://example.org/ontologies/o1#g1PropertyGroup> ;
+      sh:name "ed" ;
+      sh:nodeKind sh:IRI ;
+      sh:order "2"^^xsd:decimal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://example.org/ontologies/o1#rel2> ;
+      sh:group <http://example.org/ontologies/o1#g1PropertyGroup> ;
+      sh:name "rel2" ;
+      sh:nodeKind sh:BlankNodeOrLiteral ;
+      sh:order "1"^^xsd:decimal ;
+    ] ;
+.
+<http://example.org/ontologies/o1#g1PropertyGroup>
+  a sh:PropertyGroup ;
+  rdfs:label "g1" ;
+  sh:order "0"^^xsd:decimal ;
+.
+skos:Concept
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path skosxl:prefLabel ;
+      dash:viewer dash:LabelViewer ;
+      sh:class skosxl:Label ;
+      sh:group <http://example.org/ontologies/o1#NewPrefGroupPropertyGroup> ;
+      sh:name "testPrefXLskos" ;
+      sh:order "1"^^xsd:decimal ;
+    ] ;
+.
+skosxl:Label
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://example.org/ontologies/o1#lf2> ;
+      sh:name "lf2" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+.
+<urn:x-evn-master:o1>
+  a owl:Ontology ;
+  graphql:publicClass <http://example.org/ontologies/o1#c1> ;
+  metadata:status metadata:UnderDevelopmentStatus ;
+  swa:defaultNamespace "http://example.org/ontologies/o1#" ;
+  rdfs:label "o1" ;
+  owl:imports <http://datashapes.org/graphql> ;
+  owl:imports <http://topbraid.org/skos-xl.shapes> ;
+  owl:imports <http://topbraid.org/skos.shapes> ;
+.
