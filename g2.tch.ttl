@@ -1,0 +1,28 @@
+# baseURI: urn:x-evn-master:g2.tch
+# imports: http://topbraid.org/compliance
+# imports: http://topbraid.org/teamwork
+# imports: urn:x-evn-master:g2
+# imports: urn:x-evn-user-data
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:x-evn-master:g2.tch>
+  a owl:Ontology ;
+  dcterms:created "2022-01-13T18:20:19.712Z"^^xsd:dateTime ;
+  sioc:has_creator <urn:x-tb-users:Administrator> ;
+  teamwork:gitEnabled true ;
+  teamwork:initialChangeStatus teamwork:Uncommitted ;
+  teamwork:manager <urn:x-tb-users:Administrator> ;
+  teamwork:originalBaseURI <http://example.org/glossaries/g2> ;
+  teamwork:projectType <http://edg.topbraid.solutions/model/GlossaryProjectType> ;
+  owl:imports <http://topbraid.org/compliance> ;
+  owl:imports <http://topbraid.org/teamwork> ;
+  owl:imports <urn:x-evn-master:g2> ;
+  owl:imports <urn:x-evn-user-data> ;
+.
